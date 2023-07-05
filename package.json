@@ -1,0 +1,36 @@
+{
+	"id": "",
+	"name": "gwjj",
+	"displayName": "公维基金公众号",
+	"version": "1.0.0",
+	"description": "公维基金公众号网页端",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": "",
+	"keywords": [
+		"uni-app",
+		"uni-ui",
+		"微信公众号"
+	],
+	"author": "",
+	"license": "MIT",
+	"dependencies": {
+		"crypto-js": "^4.1.1",
+		"vuex-persistedstate": "^4.1.0"
+	},
+	"uni-app": {
+		"scripts": {
+			"h5-weixin": {
+				"title": "微信公众号",
+				"browser": "chrome",
+				"env": {
+					"UNI_PLATFORM": "h5"
+				},
+				"define": {
+					"H5-WEIXIN": true
+				}
+			}
+		}
+	}
+}

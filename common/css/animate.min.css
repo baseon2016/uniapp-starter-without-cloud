@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*!
+ * animate.css - https://animate.style/
+ * Version - 4.1.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2020 Animate.css
+ */
+:root{
+	--animate-duration: 20s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+	--animate-perspective: 1000px;
+	--animate-rate: 20deg;
+	--animate-rate1: -20deg
+}
+
+.animate__animated {
+	-webkit-animation-duration: var(--animate-duration);
+	animation-duration: var(--animate-duration);
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+
+.animate__animated.animate__infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite !important
+}
+
+.animate__animated.animate__slower {
+	-webkit-animation-duration: calc(var(--animate-duration)*3);
+	animation-duration: calc(var(--animate-duration)*3)
+}
+/* Y轴旋转 */
+@-webkit-keyframes rotateY {
+	0% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	25% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate));
+		transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate));
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	50% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	75% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate1));
+		transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate1));
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	100% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+}
+
+@keyframes rotateY {
+	0% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	25% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate));
+		transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate));
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	50% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	75% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate1));
+		transform: perspective(var(--animate-perspective)) rotateY(var(--animate-rate1));
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+
+	100% {
+		-webkit-transform: perspective(var(--animate-perspective)) rotateY(0);
+		transform: perspective(var(--animate-perspective)) rotateY(0);
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1
+	}
+}
+
+.animate__rotateY {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation: rotateY var(--animate-duration) !important;
+	animation: rotateY var(--animate-duration) !important
+}
+
+/* 闪烁 */
+@keyframes blink{
+	0% {opacity:1}
+	50% {opacity: 0;}
+	100% {opacity:1}
+}
+@-webkit-keyframes blink{
+	0% {opacity:1}
+	50% {opacity: 0;}
+	100% {opacity:1}
+}
+@-moz-keyframes blink{
+	0% {opacity:1}
+	50% {opacity: 0;}
+	100% {opacity:1}
+}
+@-o-keyframes blink{
+	0% {opacity:1}
+	50% {opacity: 0;}
+	100% {opacity:1}
+}
+.blink{
+	animation: blink 3s linear infinite;
+}
